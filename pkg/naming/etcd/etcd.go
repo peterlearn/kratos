@@ -19,10 +19,10 @@ import (
 	"sync/atomic"
 	"time"
 
+	mvccpb1 "github.com/coreos/etcd/mvcc/mvccpb"
 	"github.com/peterlearn/kratos/pkg/log"
 	"github.com/peterlearn/kratos/pkg/naming"
 	"go.etcd.io/etcd/clientv3"
-	"go.etcd.io/etcd/mvcc/mvccpb"
 	"google.golang.org/grpc"
 )
 
@@ -254,7 +254,7 @@ func (a *appInfo) watch(appID string) {
 	rch := a.e.cli.Watch(a.e.ctx, prefix, clientv3.WithPrefix())
 	for wresp := range rch {
 		for _, ev := range wresp.Events {
-			if ev.Type == mvccpb.PUT || ev.Type == mvccpb.DELETE {
+			if ev.Type == mvccpb1.PUT || ev.Type == mvccpb1.DELETE {
 				_ = a.fetchstore(appID)
 			}
 		}
