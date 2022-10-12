@@ -1,4 +1,7 @@
 ![kratos](doc/img/kratos3.png)
+```
+COPY FROM BILIBILI
+```
 
 [![Language](https://img.shields.io/badge/Language-Go-blue.svg)](https://golang.org/)
 [![GoDoc](https://godoc.org/gitlab.com/firerocksg/xy3-kratos?status.svg)](https://godoc.org/gitlab.com/firerocksg/xy3-kratos)
