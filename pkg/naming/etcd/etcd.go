@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"github.com/peterlearn/kratos/pkg/conf/env"
 	wmeta "github.com/peterlearn/kratos/pkg/naming/metadata"
-	"github.com/peterlearn/kratos/pkg/net/rpc/warden/balancer/p2c"
+	"github.com/peterlearn/kratos/pkg/net/rpc/warden/balancer/wrr"
 	"google.golang.org/grpc/resolver"
 	"google.golang.org/grpc/serviceconfig"
 	"net/url"
@@ -350,7 +350,7 @@ func (r *Resolve) Fetch(ctx context.Context) (State resolver.State, ok bool) {
 				addrs = append(addrs, addr)
 			}
 
-			LB := p2c.Name
+			LB := wrr.Name
 			State = resolver.State{
 				Addresses: addrs,
 				//默认的serviceconfig, 使用dailoption会覆盖默认config

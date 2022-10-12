@@ -16,7 +16,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/peterlearn/kratos/pkg/net/rpc/warden/balancer/p2c"
+	"github.com/peterlearn/kratos/pkg/net/rpc/warden/balancer/wrr"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/resolver"
@@ -358,7 +358,7 @@ func (r *Resolve) Fetch(ctx context.Context) (State resolver.State, ok bool) {
 			addrs = append(addrs, addr)
 		}
 
-		LB := p2c.Name
+		LB := wrr.Name
 		State = resolver.State{
 			Addresses: addrs,
 			//默认的serviceconfig, 使用dailoption会覆盖默认config

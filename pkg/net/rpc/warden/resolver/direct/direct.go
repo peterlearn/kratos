@@ -3,7 +3,7 @@ package direct
 import (
 	"context"
 	wmeta "github.com/peterlearn/kratos/pkg/naming/metadata"
-	"github.com/peterlearn/kratos/pkg/net/rpc/warden/balancer/p2c"
+	"github.com/peterlearn/kratos/pkg/net/rpc/warden/balancer/wrr"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/serviceconfig"
 	"strings"
@@ -84,7 +84,7 @@ func (d *Direct) Fetch(ctx context.Context) (State gresolver.State, ok bool) {
 	//	Instances: map[string][]*naming.Instance{env.Zone: ins},
 	//}
 
-	LB := p2c.Name
+	LB := wrr.Name
 	State = gresolver.State{
 		Addresses: stateaddrs,
 		//默认的serviceconfig, 使用dailoption会覆盖默认config
