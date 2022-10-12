@@ -1,0 +1,36 @@
+package websocket
+
+import (
+	pb "{{.ModPrefix}}{{.Name}}/api"
+	"gitlab.com/firerocksg/xy3-kratos/pkg/conf/paladin"
+	gomsg "git.huoys.com/middle-business/gomsg/pkg/ws/server"
+    "math/rand"
+    "runtime"
+    "time"
+)
+
+// New new a tcp server.
+func New(svc pb.DemoGoMsgServer) (cs *gomsg.Server, err error) {
+	var (
+		tc struct {
+			*gomsg.Config
+			Addr string
+		}
+	)
+	if err = paladin.Get("websocket.txt").UnmarshalTOML(&tc); err != nil {
+		if err != paladin.ErrNotExist {
+			return
+		}
+		err = nil
+	}
+	rand.Seed(time.Now().UTC().UnixNano())
+    runtime.GOMAXPROCS(runtime.NumCPU())
+    cs = gomsg.NewServer(tc.Config)
+	ph := pb.RegisterDemoGoMsgServer(cs, svc)
+	err = cs.ListenAndServe2(tc.Addr, ph)
+	if err != nil {
+		panic(err)
+	}
+	return
+}
+

@@ -1,0 +1,97 @@
+package service
+
+import (
+	"context"
+	"fmt"
+
+	"gitlab.com/firerocksg/xy3-kratos/pkg/log"
+
+	pb "{{.ModPrefix}}{{.Name}}/api"
+	"{{.ModPrefix}}{{.Name}}/internal/dao"
+	 "{{.ModPrefix}}{{.Name}}/internal/mgr/tablemgr"
+
+	"gitlab.com/firerocksg/xy3-kratos/pkg/conf/paladin"
+
+	"git.huoys.com/middle-business/gomsg/pkg"
+	"git.huoys.com/middle-business/gomsg/pkg/util"
+	gomsg "git.huoys.com/middle-business/gomsg/pkg/ws/server"
+)
+
+// Service service.
+type Service struct {
+	ac  *paladin.Map
+	dao dao.Dao
+}
+
+// New new a service and return.
+func New(d dao.Dao) (s *Service, err error) {
+	s = &Service{
+		ac:  &paladin.TOML{},
+		dao: d,
+	}
+	err = paladin.Watch("application.txt", s.ac)
+	return
+}
+
+// Bet tableLoop to run
+func (s *Service) Bet(ctx context.Context, req *pb.BetReq) (reply *pb.BetRsp, err error) {
+	session, ok := ctx.Value(gomsg.CTXSessionKey).(pkg.Session)
+	if !ok {
+		log.Error("ctx can't convert to Session Obj")
+		return nil, fmt.Errorf("ctx can't convert to Session Obj")
+	}
+	log.Info("sid: %d bet %d", session.ID(), req.Num)
+	reply = &pb.BetRsp{
+		Content: fmt.Sprintf("rsp bet %d", req.Num),
+	}
+    return reply, nil
+}
+
+// LoginRoom login room, create table. roomLoop to run
+func (s *Service) LoginRoom(ctx context.Context, req *pb.LoginRoomReq) (reply *pb.LoginRoomRsp, err error) {
+	session, ok := ctx.Value(gomsg.CTXSessionKey).(pkg.Session)
+	if !ok {
+		log.Error("ctx can't convert to Session Obj")
+		return nil, fmt.Errorf("ctx can't convert to Session Obj")
+	}
+	log.Info("sid: %d login %d", session.ID(), req.Pid)
+	reply = &pb.LoginRoomRsp{
+		Content: fmt.Sprintf("rsp login room %d", req.Pid),
+	}
+    return reply, nil
+}
+
+// Close close the resource.
+func (s *Service) Close() {
+	s.dao.Close()
+}
+
+//OnSessionOpen 连接打开
+func (s *Service) OnSessionOpen(ctx context.Context) {
+	session, ok := ctx.Value(gomsg.CTXSessionKey).(pkg.Session)
+	if !ok {
+		log.Error("ctx can't convert to Session Obj")
+		return
+	}
+	log.Info("OnSessionOpen sessionID: %d", session.ID())
+}
+
+//OnSessionClose 连接关闭
+func (s *Service) OnSessionClose(ctx context.Context) {
+	session, ok := ctx.Value(gomsg.CTXSessionKey).(pkg.Session)
+	if !ok {
+		log.Error("ctx can't convert to Session Obj")
+		return
+	}
+	log.Info("OnSessionClose sessionID: %d", session.ID())
+}
+
+//GetRoomLoop 获得房间的队列
+func (s *Service) GetRoomLoop() util.ILoop {
+	return tablemgr.GetRoomLoop()
+}
+
+//GetRoomLoop 获得桌子的队列
+func (s *Service) GetTableLoop(tableID int32) util.ILoop {
+	return tablemgr.GetTableLoop(tableID)
+}

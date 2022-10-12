@@ -1,0 +1,8 @@
+Addr = "0.0.0.0:3101"
+WriteTimeout = "3s"
+DetectionPeriod = "5s"
+Deadline = "60s"
+Threshold = "30s"
+RouteEnabled = false
+BroadcastConcurrentCapacity = 10
+MonitorEnabled = true

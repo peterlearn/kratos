@@ -1,0 +1,39 @@
+package rpc
+
+import (
+	"gitlab.com/firerocksg/xy3-kratos/pkg/net/rpc/warden"
+	xtime "gitlab.com/firerocksg/xy3-kratos/pkg/time"
+	"github.com/google/wire"
+	"google.golang.org/grpc"
+	"time"
+)
+
+var Provider = wire.NewSet(
+	InitConf,
+	InitOpts,
+	InitClient,
+)
+
+type Client struct {
+
+}
+
+func InitConf() *warden.ClientConfig {
+	return &warden.ClientConfig{
+		Timeout: xtime.Duration(time.Millisecond * 10000),
+	}
+}
+
+func InitOpts() []grpc.DialOption {
+	return nil
+}
+
+//把需要调用的RPC client作为参数输入到这里
+func InitClient(/* type rpc.Client */) (c *Client, err error) {
+
+	c = &Client{
+
+	}
+
+	return
+}

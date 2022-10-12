@@ -1,0 +1,20 @@
+package playermgr
+
+import (
+	"demo/internal/logic"
+	"sync"
+)
+
+var (
+	players sync.Map // [playerID : *Player]
+)
+
+func NewPlayer() {
+	p := logic.Player{}
+
+	players.Store(p.ID(), p)
+}
+
+func deletePlayer(uid int64) {
+	players.Delete(uid)
+}

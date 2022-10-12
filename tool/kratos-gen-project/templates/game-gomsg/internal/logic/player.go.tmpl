@@ -1,0 +1,21 @@
+package logic
+
+import "git.huoys.com/middle-business/gomsg/pkg"
+
+type Player struct {
+	pid     int64
+	session pkg.Session
+	props   map[int32]int64
+}
+
+func New(pid int64, s pkg.Session) *Player {
+	return &Player{
+		pid:     pid,
+		session: s,
+		props:   make(map[int32]int64),
+	}
+}
+
+func (p *Player) ID() int64 {
+	return p.pid
+}

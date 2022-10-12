@@ -1,0 +1,35 @@
+package tcp
+
+import (
+	pb "{{.ModPrefix}}{{.Name}}/api"
+	"gitlab.com/firerocksg/xy3-kratos/pkg/conf/paladin"
+	"git.huoys.com/middle-end/library/pkg/net/comet"
+    "math/rand"
+    "runtime"
+    "time"
+)
+
+// New new a tcp server.
+func New(svc pb.DemoCometServer) (cs *comet.Server, err error) {
+	var (
+		tc struct {
+			Server *comet.ServerConfig
+		}
+	)
+	if err = paladin.Get("tcp.toml").UnmarshalTOML(&tc); err != nil {
+		if err != paladin.ErrNotExist {
+			return
+		}
+		err = nil
+	}
+	rand.Seed(time.Now().UTC().UnixNano())
+    runtime.GOMAXPROCS(runtime.NumCPU())
+    cs = comet.NewServer(tc.Server)
+    pb.RegisterDemoCometServer(cs, svc)
+    err = cs.StartTCP(runtime.NumCPU())
+    if err != nil {
+        panic(err)
+    }
+	return
+}
+

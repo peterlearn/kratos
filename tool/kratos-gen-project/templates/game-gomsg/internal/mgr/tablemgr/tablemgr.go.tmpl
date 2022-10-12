@@ -1,0 +1,31 @@
+package tablemgr
+
+import (
+	"demo/internal/logic"
+	"git.huoys.com/middle-business/gomsg/pkg/util"
+	"gitlab.com/firerocksg/xy3-kratos/pkg/log"
+)
+
+var (
+	tables map[int32]*logic.Table
+
+	loop *util.Loop
+)
+
+func init() {
+	loop = util.NewLoop(1000)
+	tables = make(map[int32]*logic.Table)
+}
+
+func GetRoomLoop() util.ILoop {
+	return loop
+}
+
+func GetTableLoop(id int32) util.ILoop {
+	if t, ok := tables[id]; ok {
+		return t.GetTableLoop()
+	} else {
+		log.Error("table %d is nil ", id)
+		return nil
+	}
+}

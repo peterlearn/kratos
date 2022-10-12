@@ -1,0 +1,40 @@
+package dao
+
+import (
+	"context"
+
+	"gitlab.com/firerocksg/xy3-kratos/pkg/cache/redis"
+	"gitlab.com/firerocksg/xy3-kratos/pkg/sync/pipeline/fanout"
+)
+
+// Dao dao interface
+type Dao interface {
+	Close()
+	Ping(ctx context.Context) (err error)
+}
+
+// dao dao.
+type dao struct {
+	redis *redis.Redis
+	cache *fanout.Fanout
+}
+
+// New new a dao and return.
+func New(r *redis.Redis) (d Dao, err error) {
+	d = &dao{
+		redis: r,
+		cache: fanout.New("cache"),
+	}
+	return
+}
+
+// Close close the resource.
+func (d *dao) Close() {
+	d.redis.Close()
+	d.cache.Close()
+}
+
+// Ping ping the resource.
+func (d *dao) Ping(ctx context.Context) (err error) {
+	return nil
+}

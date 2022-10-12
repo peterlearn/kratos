@@ -1,0 +1,58 @@
+// 定义项目 API 的 proto 文件 可以同时描述 gRPC 和 HTTP API
+// protobuf 文件参考:
+//  - https://developers.google.com/protocol-buffers/
+syntax = "proto3";
+
+import "gogoproto/gogo.proto";
+import "google/api/annotations.proto";
+
+// package 命名使用 {appid}.{version} 的方式, version 形如 v1, v2 ..
+package demo.service.v1;
+
+// NOTE: 最后请删除这些无用的注释 (゜-゜)つロ
+
+option go_package = "api";
+option (gogoproto.goproto_getters_all) = false;
+
+service Demo {
+    //`room:"true"`
+	rpc LoginRoom(LoginRoomReq) returns (LoginRoomRsp) {
+        option (google.api.http) = {
+            post:"/Demo/LoginRoom"
+        };
+    };
+    rpc Bet(BetReq) returns (BetRsp) {
+        option (google.api.http) = {
+            post:"/Demo/Bet"
+        };
+    };
+}
+
+enum GameCommand {
+    Nothing = 0;
+    LoginRoom = 1; //登入房间
+    Bet = 2; //下注
+    PushExample = 1000;
+}
+
+enum DemoErrCode {
+    Success = 0;
+    CoinNoEnough = 1000;
+}
+
+message LoginRoomReq {
+	int64 pid = 1 [(gogoproto.moretags)='form:"pid" validate:"required"']; //玩家ID
+}
+
+message LoginRoomRsp {
+    string Content = 1 [(gogoproto.jsontag) = 'content'];
+}
+
+
+message BetReq {
+	int32 num = 1 [(gogoproto.moretags)='form:"num" validate:"required"'];
+}
+
+message BetRsp {
+    string Content = 1 [(gogoproto.jsontag) = 'content'];
+}

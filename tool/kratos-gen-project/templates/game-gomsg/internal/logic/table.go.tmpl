@@ -1,0 +1,28 @@
+package logic
+
+import (
+	"git.huoys.com/middle-business/gomsg/pkg/util"
+)
+
+type Table struct {
+	id      int32      //桌子ID
+	loop    *util.Loop //桌子消息队列
+	max     int32      //桌子最大人数
+	curr    int32      //桌子当前人数
+	players []*Player  //人数列表
+	logic   GameLogic  //游戏逻辑
+}
+
+// 房间启动时，生成固定数量桌子
+func (t *Table) Init(id, max int32) {
+	t.id = id
+	t.loop = util.NewLoop(1000)
+	t.max = max
+	t.players = make([]*Player, max)
+}
+
+func (t *Table) GetTableLoop() *util.Loop {
+	return t.loop
+}
+
+

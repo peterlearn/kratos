@@ -1,0 +1,36 @@
+[Server]
+[Server.comet]
+    sndbuf = 4096
+    rcvbuf = 4096
+    keepalive = false
+    reader = 32
+    readBuf = 1024
+    readBufSize = 8192
+    writer = 32
+    writeBuf = 1024
+    writeBufSize = 8192
+
+[Server.tcp]
+    bind = [":3102"]
+
+[Server.protocol]
+    proxy = false
+    timer = 32
+    timerSize = 2048
+    svrProto = 50
+    cliProto = 50
+    handshakeTimeout = "15s"
+    heartbeatTimeout = "6s"
+
+[Server.auth]
+    open = false
+    appID = "auth"
+
+[Server.bucket]
+    size = 32
+    channel = 1024
+
+[Server.chanSize]
+    push = 2048
+    close = 1024
+    disconnect = 1024

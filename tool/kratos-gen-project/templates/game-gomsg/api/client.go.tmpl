@@ -1,0 +1,25 @@
+package api
+import (
+	"context"
+	"fmt"
+
+	"gitlab.com/firerocksg/xy3-kratos/pkg/net/rpc/warden"
+
+	"google.golang.org/grpc"
+)
+
+// AppID .
+const AppID = "TODO: ADD APP ID"
+
+// NewClient new grpc client
+func NewClient(cfg *warden.ClientConfig, opts ...grpc.DialOption) (DemoClient, error) {
+	client := warden.NewClient(cfg, opts...)
+	cc, err := client.Dial(context.Background(), fmt.Sprintf("discovery://default/%s", AppID))
+	if err != nil {
+		return nil, err
+	}
+	return NewDemoClient(cc), nil
+}
+
+// 生成游戏服框架时(已自动生成swagger、ecode)，其它可选参数：--gomsg
+//go:generate kratos tool protoc --gomsg api.proto

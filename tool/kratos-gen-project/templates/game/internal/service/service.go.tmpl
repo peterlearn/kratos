@@ -1,0 +1,68 @@
+package service
+
+import (
+	"context"
+	"gitlab.com/firerocksg/xy3-kratos/pkg/log"
+
+	pb "{{.ModPrefix}}{{.Name}}/api"
+	"{{.ModPrefix}}{{.Name}}/internal/dao"
+	"{{.ModPrefix}}{{.Name}}/internal/notify"
+	"gitlab.com/firerocksg/xy3-kratos/pkg/conf/paladin"
+
+	"git.huoys.com/middle-end/library/pkg/net/comet"
+	nmd "gitlab.com/firerocksg/xy3-kratos/pkg/net/metadata"
+)
+
+// Service service.
+type Service struct {
+	ac  *paladin.Map
+	dao dao.Dao
+	nc  notify.Notify
+}
+
+// New new a service and return.
+func New(d dao.Dao) (s *Service, err error) {
+	s = &Service{
+		ac:  &paladin.TOML{},
+		dao: d,
+	}
+	err = paladin.Watch("application.toml", s.ac)
+	return
+}
+
+// SayHelloURL bm demo func.
+func (s *Service) SayHello(ctx context.Context, req *pb.HelloReq) (reply *pb.HelloResp, err error) {
+	reply = &pb.HelloResp{
+		Content: "hello " + req.Name,
+	}
+	mid := nmd.String(ctx, nmd.Mid)
+	log.Info("mid: %s hello url %s", mid, req.Name)
+    //s.nc.Close(mid)
+    s.nc.SyncPush(mid, pb.GameCommand_PushExample, reply)
+	return
+}
+
+//SetCometChan
+func (s *Service) SetCometChan(cl *comet.ChanList, cs *comet.Server) {
+	go s.disconnect(cl.DisconnectChan)
+	s.nc = notify.New(cl.PushChan, cl.CloseChan, cs)
+}
+
+//IsLoopFunc
+func (s *Service) IsLoopFunc(f string) (isLoop bool) {
+	isLoop = true
+	return
+}
+
+//disconnect
+func (s *Service) disconnect(dc chan string) {
+	for {
+		sessionID := <-dc
+		log.Info("sessionID: %s", sessionID)
+	}
+}
+
+// Close close the resource.
+func (s *Service) Close() {
+	s.dao.Close()
+}
