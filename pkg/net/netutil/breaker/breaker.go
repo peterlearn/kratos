@@ -4,7 +4,7 @@ import (
 	"sync"
 	"time"
 
-	xtime "github.com/pll/kratos/pkg/time"
+	xtime "github.com/peterlearn/kratos/pkg/time"
 )
 
 // Config broker config.

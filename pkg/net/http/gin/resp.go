@@ -2,7 +2,7 @@ package gin
 
 import (
 	"context"
-	"github.com/pll/kratos/pkg/ecode"
+	"github.com/peterlearn/kratos/pkg/ecode"
 )
 
 const (

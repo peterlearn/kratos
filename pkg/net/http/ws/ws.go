@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/gorilla/websocket"
-	"github.com/pll/kratos/pkg/log"
+	"github.com/peterlearn/kratos/pkg/log"
 	"net/http"
 	"sync"
 	"time"

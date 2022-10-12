@@ -4,8 +4,8 @@ import (
 	"context"
 	"strconv"
 
-	nmd "github.com/pll/kratos/pkg/naming/metadata"
-	"github.com/pll/kratos/pkg/stat/sys/cpu"
+	nmd "github.com/peterlearn/kratos/pkg/naming/metadata"
+	"github.com/peterlearn/kratos/pkg/stat/sys/cpu"
 
 	"google.golang.org/grpc"
 	gmd "google.golang.org/grpc/metadata"

@@ -9,11 +9,11 @@ import (
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/protoc-gen-go/descriptor"
 	plugin "github.com/golang/protobuf/protoc-gen-go/plugin"
-	"github.com/pll/kratos/tool/protobuf/pkg/generator"
-	"github.com/pll/kratos/tool/protobuf/pkg/naming"
-	"github.com/pll/kratos/tool/protobuf/pkg/tag"
-	"github.com/pll/kratos/tool/protobuf/pkg/typemap"
-	"github.com/pll/kratos/tool/protobuf/pkg/utils"
+	"github.com/peterlearn/kratos/tool/protobuf/pkg/generator"
+	"github.com/peterlearn/kratos/tool/protobuf/pkg/naming"
+	"github.com/peterlearn/kratos/tool/protobuf/pkg/tag"
+	"github.com/peterlearn/kratos/tool/protobuf/pkg/typemap"
+	"github.com/peterlearn/kratos/tool/protobuf/pkg/utils"
 )
 
 type bm struct {
@@ -115,8 +115,8 @@ func (t *bm) generateImports(file *descriptor.FileDescriptorProto) {
 	//t.P(`	`,t.pkgs["context"], ` "context"`)
 	t.P(`	"context"`)
 	t.P()
-	t.P(`	bm "github.com/pll/kratos/pkg/net/http/blademaster"`)
-	t.P(`	"github.com/pll/kratos/pkg/net/http/blademaster/binding"`)
+	t.P(`	bm "github.com/peterlearn/kratos/pkg/net/http/blademaster"`)
+	t.P(`	"github.com/peterlearn/kratos/pkg/net/http/blademaster/binding"`)
 
 	t.P(`)`)
 	// It's legal to import a message and use it as an input or output for a

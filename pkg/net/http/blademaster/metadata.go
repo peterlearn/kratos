@@ -7,10 +7,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/pll/kratos/pkg/conf/env"
-	"github.com/pll/kratos/pkg/log"
-	"github.com/pll/kratos/pkg/net/criticality"
-	"github.com/pll/kratos/pkg/net/metadata"
+	"github.com/peterlearn/kratos/pkg/conf/env"
+	"github.com/peterlearn/kratos/pkg/log"
+	"github.com/peterlearn/kratos/pkg/net/criticality"
+	"github.com/peterlearn/kratos/pkg/net/metadata"
 
 	"github.com/pkg/errors"
 )

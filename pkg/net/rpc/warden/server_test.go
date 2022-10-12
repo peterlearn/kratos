@@ -13,12 +13,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pll/kratos/pkg/ecode"
-	nmd "github.com/pll/kratos/pkg/net/metadata"
-	"github.com/pll/kratos/pkg/net/netutil/breaker"
-	pb "github.com/pll/kratos/pkg/net/rpc/warden/internal/proto/testproto"
-	xtrace "github.com/pll/kratos/pkg/net/trace"
-	xtime "github.com/pll/kratos/pkg/time"
+	"github.com/peterlearn/kratos/pkg/ecode"
+	nmd "github.com/peterlearn/kratos/pkg/net/metadata"
+	"github.com/peterlearn/kratos/pkg/net/netutil/breaker"
+	pb "github.com/peterlearn/kratos/pkg/net/rpc/warden/internal/proto/testproto"
+	xtrace "github.com/peterlearn/kratos/pkg/net/trace"
+	xtime "github.com/peterlearn/kratos/pkg/time"
 
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"

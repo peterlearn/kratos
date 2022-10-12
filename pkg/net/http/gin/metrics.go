@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"encoding/json"
 	"github.com/gin-gonic/gin"
-	"github.com/pll/kratos/pkg/net/metadata"
-	"github.com/pll/kratos/pkg/stat/metric"
+	"github.com/peterlearn/kratos/pkg/net/metadata"
+	"github.com/peterlearn/kratos/pkg/stat/metric"
 	"strconv"
 	"time"
 )

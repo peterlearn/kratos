@@ -6,8 +6,8 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/pll/kratos/pkg/conf/env"
-	"github.com/pll/kratos/pkg/net/ip"
+	"github.com/peterlearn/kratos/pkg/conf/env"
+	"github.com/peterlearn/kratos/pkg/net/ip"
 
 	"github.com/pkg/errors"
 )

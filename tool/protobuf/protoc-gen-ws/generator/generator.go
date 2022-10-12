@@ -7,10 +7,10 @@ import (
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/protoc-gen-go/descriptor"
 	plugin "github.com/golang/protobuf/protoc-gen-go/plugin"
-	"github.com/pll/kratos/tool/protobuf/pkg/generator"
-	"github.com/pll/kratos/tool/protobuf/pkg/naming"
-	"github.com/pll/kratos/tool/protobuf/pkg/tag"
-	"github.com/pll/kratos/tool/protobuf/pkg/typemap"
+	"github.com/peterlearn/kratos/tool/protobuf/pkg/generator"
+	"github.com/peterlearn/kratos/tool/protobuf/pkg/naming"
+	"github.com/peterlearn/kratos/tool/protobuf/pkg/tag"
+	"github.com/peterlearn/kratos/tool/protobuf/pkg/typemap"
 )
 
 type ws struct {
@@ -100,7 +100,7 @@ func (t *ws) generateImports(file *descriptor.FileDescriptorProto) {
 	t.P(`	"git.huoys.com/middle-business/gomsg/pkg"`)
 	t.P(`	"git.huoys.com/middle-business/gomsg/pkg/ws/server"`)
 	t.P(`	"github.com/gogo/protobuf/proto"`)
-	t.P(`	"github.com/pll/kratos/pkg/ecode"`)
+	t.P(`	"github.com/peterlearn/kratos/pkg/ecode"`)
 
 	t.P(`)`)
 	// It's legal to import a message and use it as an input or output for a

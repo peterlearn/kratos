@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/pll/kratos/pkg/log/internal/filewriter"
+	"github.com/peterlearn/kratos/pkg/log/internal/filewriter"
 )
 
 // level idx

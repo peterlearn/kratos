@@ -10,16 +10,16 @@ import (
 	"sync"
 	"time"
 
-	"github.com/pll/kratos/pkg/conf/dsn"
-	"github.com/pll/kratos/pkg/log"
-	nmd "github.com/pll/kratos/pkg/net/metadata"
-	"github.com/pll/kratos/pkg/net/rpc/warden/ratelimiter"
-	"github.com/pll/kratos/pkg/net/trace"
-	xtime "github.com/pll/kratos/pkg/time"
+	"github.com/peterlearn/kratos/pkg/conf/dsn"
+	"github.com/peterlearn/kratos/pkg/log"
+	nmd "github.com/peterlearn/kratos/pkg/net/metadata"
+	"github.com/peterlearn/kratos/pkg/net/rpc/warden/ratelimiter"
+	"github.com/peterlearn/kratos/pkg/net/trace"
+	xtime "github.com/peterlearn/kratos/pkg/time"
 
 	//this package is for json format response
-	_ "github.com/pll/kratos/pkg/net/rpc/warden/internal/encoding/json"
-	"github.com/pll/kratos/pkg/net/rpc/warden/internal/status"
+	_ "github.com/peterlearn/kratos/pkg/net/rpc/warden/internal/encoding/json"
+	"github.com/peterlearn/kratos/pkg/net/rpc/warden/internal/status"
 
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"

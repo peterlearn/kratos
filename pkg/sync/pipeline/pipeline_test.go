@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pll/kratos/pkg/net/metadata"
-	xtime "github.com/pll/kratos/pkg/time"
+	"github.com/peterlearn/kratos/pkg/net/metadata"
+	xtime "github.com/peterlearn/kratos/pkg/time"
 )
 
 func TestPipeline(t *testing.T) {

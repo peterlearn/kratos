@@ -2,7 +2,7 @@ package gin
 
 import (
 	"github.com/gogo/protobuf/proto"
-	"github.com/pll/kratos/pkg/ecode"
+	"github.com/peterlearn/kratos/pkg/ecode"
 )
 
 type ProtoMessage struct {

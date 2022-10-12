@@ -9,11 +9,11 @@ import (
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/protoc-gen-go/descriptor"
 	plugin "github.com/golang/protobuf/protoc-gen-go/plugin"
-	"github.com/pll/kratos/tool/protobuf/pkg/generator"
-	"github.com/pll/kratos/tool/protobuf/pkg/naming"
-	"github.com/pll/kratos/tool/protobuf/pkg/tag"
-	"github.com/pll/kratos/tool/protobuf/pkg/typemap"
-	"github.com/pll/kratos/tool/protobuf/pkg/utils"
+	"github.com/peterlearn/kratos/tool/protobuf/pkg/generator"
+	"github.com/peterlearn/kratos/tool/protobuf/pkg/naming"
+	"github.com/peterlearn/kratos/tool/protobuf/pkg/tag"
+	"github.com/peterlearn/kratos/tool/protobuf/pkg/typemap"
+	"github.com/peterlearn/kratos/tool/protobuf/pkg/utils"
 )
 
 type kgin struct {
@@ -115,7 +115,7 @@ func (t *kgin) generateImports(file *descriptor.FileDescriptorProto) {
 	//t.P(`	`,t.pkgs["context"], ` "context"`)
 	t.P(`	"context"`)
 	t.P()
-	t.P(`	kgin "github.com/pll/kratos/pkg/net/http/gin"`)
+	t.P(`	kgin "github.com/peterlearn/kratos/pkg/net/http/gin"`)
 	t.P(`	"github.com/gin-gonic/gin"`)
 	t.P(`	"github.com/gogo/protobuf/proto"`)
 	t.P(`	"net/http"`)

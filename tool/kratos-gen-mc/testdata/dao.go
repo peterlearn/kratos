@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/pll/kratos/pkg/cache/memcache"
-	"github.com/pll/kratos/pkg/container/pool"
-	xtime "github.com/pll/kratos/pkg/time"
+	"github.com/peterlearn/kratos/pkg/cache/memcache"
+	"github.com/peterlearn/kratos/pkg/container/pool"
+	xtime "github.com/peterlearn/kratos/pkg/time"
 )
 
 // Dao .

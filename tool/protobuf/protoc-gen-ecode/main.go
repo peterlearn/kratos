@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/pll/kratos/tool/protobuf/pkg/gen"
-	"github.com/pll/kratos/tool/protobuf/pkg/generator"
-	ecodegen "github.com/pll/kratos/tool/protobuf/protoc-gen-ecode/generator"
+	"github.com/peterlearn/kratos/tool/protobuf/pkg/gen"
+	"github.com/peterlearn/kratos/tool/protobuf/pkg/generator"
+	ecodegen "github.com/peterlearn/kratos/tool/protobuf/protoc-gen-ecode/generator"
 )
 
 func main() {

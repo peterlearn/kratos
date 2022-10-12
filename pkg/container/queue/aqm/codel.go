@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/pll/kratos/pkg/ecode"
+	"github.com/peterlearn/kratos/pkg/ecode"
 )
 
 // Config codel config.

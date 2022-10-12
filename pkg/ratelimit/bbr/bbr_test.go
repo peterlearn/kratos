@@ -10,8 +10,8 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/pll/kratos/pkg/ratelimit"
-	"github.com/pll/kratos/pkg/stat/metric"
+	"github.com/peterlearn/kratos/pkg/ratelimit"
+	"github.com/peterlearn/kratos/pkg/stat/metric"
 )
 
 func confForTest() *Config {

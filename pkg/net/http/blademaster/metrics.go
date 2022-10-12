@@ -1,6 +1,6 @@
 package blademaster
 
-import "github.com/pll/kratos/pkg/stat/metric"
+import "github.com/peterlearn/kratos/pkg/stat/metric"
 
 const (
 	clientNamespace = "http_client"

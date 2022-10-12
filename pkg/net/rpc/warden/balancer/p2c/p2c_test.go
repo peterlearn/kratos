@@ -10,10 +10,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pll/kratos/pkg/conf/env"
+	"github.com/peterlearn/kratos/pkg/conf/env"
 
-	wmeta "github.com/pll/kratos/pkg/naming/metadata"
-	nmd "github.com/pll/kratos/pkg/net/metadata"
+	wmeta "github.com/peterlearn/kratos/pkg/naming/metadata"
+	nmd "github.com/peterlearn/kratos/pkg/net/metadata"
 
 	"google.golang.org/grpc/balancer"
 	"google.golang.org/grpc/codes"

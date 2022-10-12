@@ -1,4 +1,4 @@
-module github.com/pll/kratos
+module github.com/peterlearn/kratos
 
 go 1.17
 

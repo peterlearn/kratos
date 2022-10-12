@@ -6,13 +6,13 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/pll/kratos/pkg/container/group"
-	"github.com/pll/kratos/pkg/ecode"
-	"github.com/pll/kratos/pkg/log"
-	limit "github.com/pll/kratos/pkg/ratelimit"
-	"github.com/pll/kratos/pkg/stat/metric"
+	"github.com/peterlearn/kratos/pkg/container/group"
+	"github.com/peterlearn/kratos/pkg/ecode"
+	"github.com/peterlearn/kratos/pkg/log"
+	limit "github.com/peterlearn/kratos/pkg/ratelimit"
+	"github.com/peterlearn/kratos/pkg/stat/metric"
 
-	cpustat "github.com/pll/kratos/pkg/stat/sys/cpu"
+	cpustat "github.com/peterlearn/kratos/pkg/stat/sys/cpu"
 )
 
 var (

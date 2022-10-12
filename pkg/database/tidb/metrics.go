@@ -1,7 +1,7 @@
 package tidb
 
 //
-//import "github.com/pll/kratos/pkg/stat/metric"
+//import "github.com/peterlearn/kratos/pkg/stat/metric"
 //
 //const namespace = "tidb_client"
 //

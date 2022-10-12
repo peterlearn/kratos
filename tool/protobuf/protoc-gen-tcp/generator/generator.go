@@ -8,10 +8,10 @@ import (
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/protoc-gen-go/descriptor"
 	plugin "github.com/golang/protobuf/protoc-gen-go/plugin"
-	"github.com/pll/kratos/tool/protobuf/pkg/generator"
-	"github.com/pll/kratos/tool/protobuf/pkg/naming"
-	"github.com/pll/kratos/tool/protobuf/pkg/tag"
-	"github.com/pll/kratos/tool/protobuf/pkg/typemap"
+	"github.com/peterlearn/kratos/tool/protobuf/pkg/generator"
+	"github.com/peterlearn/kratos/tool/protobuf/pkg/naming"
+	"github.com/peterlearn/kratos/tool/protobuf/pkg/tag"
+	"github.com/peterlearn/kratos/tool/protobuf/pkg/typemap"
 )
 
 type tcp struct {
@@ -98,7 +98,7 @@ func (t *tcp) generateImports(file *descriptor.FileDescriptorProto) {
 	t.P()
 	t.P(`	"git.huoys.com/middle-end/library/pkg/net/tcp"`)
 	t.P(`	"github.com/gogo/protobuf/proto"`)
-	t.P(`	"github.com/pll/kratos/pkg/log"`)
+	t.P(`	"github.com/peterlearn/kratos/pkg/log"`)
 	t.P(`	"runtime/debug"`)
 
 	t.P(`)`)

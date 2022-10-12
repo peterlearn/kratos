@@ -7,10 +7,10 @@ package tidb
 //	"strings"
 //	"time"
 //
-//	"github.com/pll/kratos/pkg/conf/env"
-//	"github.com/pll/kratos/pkg/log"
-//	"github.com/pll/kratos/pkg/naming"
-//	"github.com/pll/kratos/pkg/naming/discovery"
+//	"github.com/peterlearn/kratos/pkg/conf/env"
+//	"github.com/peterlearn/kratos/pkg/log"
+//	"github.com/peterlearn/kratos/pkg/naming"
+//	"github.com/peterlearn/kratos/pkg/naming/discovery"
 //)
 //
 //var _schema = "tidb://"

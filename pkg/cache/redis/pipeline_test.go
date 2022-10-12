@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pll/kratos/pkg/container/pool"
-	xtime "github.com/pll/kratos/pkg/time"
+	"github.com/peterlearn/kratos/pkg/container/pool"
+	xtime "github.com/peterlearn/kratos/pkg/time"
 )
 
 func TestRedis_Pipeline(t *testing.T) {

@@ -3,16 +3,16 @@ package resolver
 import (
 	"context"
 	"github.com/pkg/errors"
-	"github.com/pll/kratos/pkg/conf/env"
-	"github.com/pll/kratos/pkg/naming/kubernetes"
+	"github.com/peterlearn/kratos/pkg/conf/env"
+	"github.com/peterlearn/kratos/pkg/naming/kubernetes"
 	"net/url"
 	"strconv"
 	"strings"
 	"sync"
 
-	"github.com/pll/kratos/pkg/log"
-	"github.com/pll/kratos/pkg/naming"
-	wmeta "github.com/pll/kratos/pkg/naming/metadata"
+	"github.com/peterlearn/kratos/pkg/log"
+	"github.com/peterlearn/kratos/pkg/naming"
+	wmeta "github.com/peterlearn/kratos/pkg/naming/metadata"
 
 	"google.golang.org/grpc/resolver"
 )

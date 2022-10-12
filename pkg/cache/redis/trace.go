@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/pll/kratos/pkg/log"
-	"github.com/pll/kratos/pkg/net/trace"
+	"github.com/peterlearn/kratos/pkg/log"
+	"github.com/peterlearn/kratos/pkg/net/trace"
 )
 
 const (

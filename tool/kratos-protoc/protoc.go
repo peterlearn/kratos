@@ -206,7 +206,7 @@ func goget(url string) error {
 
 func latestKratos() (string, error) {
 	gopath := gopath()
-	ext := path.Join(gopath, "src/github.com/pll/kratos/third_party")
+	ext := path.Join(gopath, "src/github.com/peterlearn/kratos/third_party")
 	if _, err := os.Stat(ext); !os.IsNotExist(err) {
 		return ext, nil
 	}

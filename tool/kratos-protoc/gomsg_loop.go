@@ -5,7 +5,7 @@ import (
 )
 
 const (
-	_getGomsgLoopGen = "go get -u github.com/pll/kratos/tool/protobuf/protoc-gen-gomsg-loop"
+	_getGomsgLoopGen = "go get -u github.com/peterlearn/kratos/tool/protobuf/protoc-gen-gomsg-loop"
 	_gomsgLoopProtoc = "protoc --proto_path=%s --proto_path=%s --proto_path=%s --proto_path=%s --gomsg_out=:."
 )
 

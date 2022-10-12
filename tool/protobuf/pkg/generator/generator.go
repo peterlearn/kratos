@@ -14,16 +14,16 @@ import (
 	"github.com/golang/protobuf/protoc-gen-go/descriptor"
 	plugin "github.com/golang/protobuf/protoc-gen-go/plugin"
 	"github.com/pkg/errors"
-	"github.com/pll/kratos/tool/protobuf/pkg/gen"
-	"github.com/pll/kratos/tool/protobuf/pkg/naming"
-	"github.com/pll/kratos/tool/protobuf/pkg/typemap"
-	"github.com/pll/kratos/tool/protobuf/pkg/utils"
+	"github.com/peterlearn/kratos/tool/protobuf/pkg/gen"
+	"github.com/peterlearn/kratos/tool/protobuf/pkg/naming"
+	"github.com/peterlearn/kratos/tool/protobuf/pkg/typemap"
+	"github.com/peterlearn/kratos/tool/protobuf/pkg/utils"
 )
 
 const Version = "v0.7"
 
-var GoModuleImportPath = "github.com/pll/kratos"
-var GoModuleDirName = "github.com/pll/kratos"
+var GoModuleImportPath = "github.com/peterlearn/kratos"
+var GoModuleDirName = "github.com/peterlearn/kratos"
 
 type Base struct {
 	Reg *typemap.Registry
