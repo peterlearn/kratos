@@ -25,9 +25,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/peterlearn/kratos/pkg/container/pool"
-	"github.com/peterlearn/kratos/pkg/net/trace"
-	xtime "github.com/peterlearn/kratos/pkg/time"
+	"github.com/peterlearn/kratos/v1/pkg/container/pool"
+	"github.com/peterlearn/kratos/v1/pkg/net/trace"
+	xtime "github.com/peterlearn/kratos/v1/pkg/time"
 )
 
 var beginTime, _ = time.Parse("2006-01-02 15:04:05", "2006-01-02 15:04:05")

@@ -6,11 +6,11 @@ import (
 	"io"
 	"time"
 
-	"github.com/peterlearn/kratos/pkg/log"
-	"github.com/peterlearn/kratos/pkg/net/netutil/breaker"
-	"github.com/peterlearn/kratos/pkg/net/rpc/warden"
-	pb "github.com/peterlearn/kratos/pkg/net/rpc/warden/internal/proto/testproto"
-	xtime "github.com/peterlearn/kratos/pkg/time"
+	"github.com/peterlearn/kratos/v1/pkg/log"
+	"github.com/peterlearn/kratos/v1/pkg/net/netutil/breaker"
+	"github.com/peterlearn/kratos/v1/pkg/net/rpc/warden"
+	pb "github.com/peterlearn/kratos/v1/pkg/net/rpc/warden/internal/proto/testproto"
+	xtime "github.com/peterlearn/kratos/v1/pkg/time"
 
 	"google.golang.org/grpc"
 )

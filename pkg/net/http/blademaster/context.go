@@ -9,11 +9,11 @@ import (
 	"sync"
 	"text/template"
 
-	"github.com/peterlearn/kratos/pkg/net/metadata"
+	"github.com/peterlearn/kratos/v1/pkg/net/metadata"
 
-	"github.com/peterlearn/kratos/pkg/ecode"
-	"github.com/peterlearn/kratos/pkg/net/http/blademaster/binding"
-	"github.com/peterlearn/kratos/pkg/net/http/blademaster/render"
+	"github.com/peterlearn/kratos/v1/pkg/ecode"
+	"github.com/peterlearn/kratos/v1/pkg/net/http/blademaster/binding"
+	"github.com/peterlearn/kratos/v1/pkg/net/http/blademaster/render"
 
 	"github.com/gogo/protobuf/proto"
 	"github.com/gogo/protobuf/types"

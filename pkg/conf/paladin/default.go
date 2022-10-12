@@ -5,7 +5,7 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	"github.com/peterlearn/kratos/pkg/log"
+	"github.com/peterlearn/kratos/v1/pkg/log"
 )
 
 var (

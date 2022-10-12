@@ -8,10 +8,10 @@ import (
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/protoc-gen-go/descriptor"
 	plugin "github.com/golang/protobuf/protoc-gen-go/plugin"
-	"github.com/peterlearn/kratos/tool/protobuf/pkg/generator"
-	"github.com/peterlearn/kratos/tool/protobuf/pkg/naming"
-	"github.com/peterlearn/kratos/tool/protobuf/pkg/tag"
-	"github.com/peterlearn/kratos/tool/protobuf/pkg/typemap"
+	"github.com/peterlearn/kratos/v1/tool/protobuf/pkg/generator"
+	"github.com/peterlearn/kratos/v1/tool/protobuf/pkg/naming"
+	"github.com/peterlearn/kratos/v1/tool/protobuf/pkg/tag"
+	"github.com/peterlearn/kratos/v1/tool/protobuf/pkg/typemap"
 )
 
 type comet struct {
@@ -98,7 +98,7 @@ func (t *comet) generateImports(file *descriptor.FileDescriptorProto) {
 	t.P()
 	t.P(`	"git.huoys.com/middle-end/library/pkg/net/comet"`)
 	t.P(`	"github.com/gogo/protobuf/proto"`)
-	t.P(`	"github.com/peterlearn/kratos/pkg/log"`)
+	t.P(`	"github.com/peterlearn/kratos/v1/pkg/log"`)
 	t.P(`	"runtime/debug"`)
 
 	t.P(`)`)

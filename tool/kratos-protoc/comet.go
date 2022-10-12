@@ -5,7 +5,7 @@ import (
 )
 
 const (
-	_getCometGen = "go get -u github.com/peterlearn/kratos/tool/protobuf/protoc-gen-comet"
+	_getCometGen = "go get -u github.com/peterlearn/kratos/v1/tool/protobuf/protoc-gen-comet"
 	_cometProtoc = "protoc --proto_path=%s --proto_path=%s --proto_path=%s --proto_path=%s --comet_out=:."
 )
 

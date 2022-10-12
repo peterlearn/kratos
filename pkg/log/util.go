@@ -7,10 +7,10 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/peterlearn/kratos/pkg/conf/env"
-	"github.com/peterlearn/kratos/pkg/log/internal/core"
-	"github.com/peterlearn/kratos/pkg/net/metadata"
-	"github.com/peterlearn/kratos/pkg/net/trace"
+	"github.com/peterlearn/kratos/v1/pkg/conf/env"
+	"github.com/peterlearn/kratos/v1/pkg/log/internal/core"
+	"github.com/peterlearn/kratos/v1/pkg/net/metadata"
+	"github.com/peterlearn/kratos/v1/pkg/net/trace"
 )
 
 func addExtraField(ctx context.Context, fields map[string]interface{}) {

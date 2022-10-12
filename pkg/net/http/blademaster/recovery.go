@@ -6,7 +6,7 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/peterlearn/kratos/pkg/log"
+	"github.com/peterlearn/kratos/v1/pkg/log"
 )
 
 // Recovery returns a middleware that recovers from any panics and writes a 500 if there was one.

@@ -9,7 +9,7 @@ import (
 	"github.com/golang/protobuf/protoc-gen-go/descriptor"
 	"github.com/pkg/errors"
 	"github.com/siddontang/go/ioutil2"
-	"github.com/peterlearn/kratos/tool/protobuf/pkg/utils"
+	"github.com/peterlearn/kratos/v1/tool/protobuf/pkg/utils"
 )
 
 // GetVersionPrefix 根据go包名获取api版本前缀

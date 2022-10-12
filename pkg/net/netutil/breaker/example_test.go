@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/peterlearn/kratos/pkg/net/netutil/breaker"
-	xtime "github.com/peterlearn/kratos/pkg/time"
+	"github.com/peterlearn/kratos/v1/pkg/net/netutil/breaker"
+	xtime "github.com/peterlearn/kratos/v1/pkg/time"
 )
 
 // ExampleGroup show group usage.

@@ -7,12 +7,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/peterlearn/kratos/pkg/net/netutil/breaker"
-	"github.com/peterlearn/kratos/pkg/net/rpc/warden"
-	pb "github.com/peterlearn/kratos/pkg/net/rpc/warden/internal/proto/testproto"
-	"github.com/peterlearn/kratos/pkg/net/rpc/warden/resolver"
-	"github.com/peterlearn/kratos/pkg/net/rpc/warden/resolver/direct"
-	xtime "github.com/peterlearn/kratos/pkg/time"
+	"github.com/peterlearn/kratos/v1/pkg/net/netutil/breaker"
+	"github.com/peterlearn/kratos/v1/pkg/net/rpc/warden"
+	pb "github.com/peterlearn/kratos/v1/pkg/net/rpc/warden/internal/proto/testproto"
+	"github.com/peterlearn/kratos/v1/pkg/net/rpc/warden/resolver"
+	"github.com/peterlearn/kratos/v1/pkg/net/rpc/warden/resolver/direct"
+	xtime "github.com/peterlearn/kratos/v1/pkg/time"
 )
 
 type testServer struct {

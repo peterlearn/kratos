@@ -9,10 +9,10 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	"github.com/peterlearn/kratos/pkg/conf/env"
-	wmeta "github.com/peterlearn/kratos/pkg/naming/metadata"
-	nmd "github.com/peterlearn/kratos/pkg/net/metadata"
-	"github.com/peterlearn/kratos/pkg/stat/metric"
+	"github.com/peterlearn/kratos/v1/pkg/conf/env"
+	wmeta "github.com/peterlearn/kratos/v1/pkg/naming/metadata"
+	nmd "github.com/peterlearn/kratos/v1/pkg/net/metadata"
+	"github.com/peterlearn/kratos/v1/pkg/stat/metric"
 
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/grpc/balancer"

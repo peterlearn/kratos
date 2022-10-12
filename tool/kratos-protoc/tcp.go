@@ -3,7 +3,7 @@ package main
 import "os/exec"
 
 const (
-	_getTcpGen = "go get -u github.com/peterlearn/kratos/tool/protobuf/protoc-gen-tcp"
+	_getTcpGen = "go get -u github.com/peterlearn/kratos/v1/tool/protobuf/protoc-gen-tcp"
 	_tcpProtoc = "protoc --proto_path=%s --proto_path=%s --proto_path=%s --proto_path=%s --tcp_out=:."
 )
 

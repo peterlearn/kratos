@@ -9,10 +9,10 @@ package tidb
 //	"sync/atomic"
 //	"time"
 //
-//	"github.com/peterlearn/kratos/pkg/log"
-//	"github.com/peterlearn/kratos/pkg/naming"
-//	"github.com/peterlearn/kratos/pkg/net/netutil/breaker"
-//	"github.com/peterlearn/kratos/pkg/net/trace"
+//	"github.com/peterlearn/kratos/v1/pkg/log"
+//	"github.com/peterlearn/kratos/v1/pkg/naming"
+//	"github.com/peterlearn/kratos/v1/pkg/net/netutil/breaker"
+//	"github.com/peterlearn/kratos/v1/pkg/net/trace"
 //
 //	"github.com/go-sql-driver/mysql"
 //	"github.com/pkg/errors"

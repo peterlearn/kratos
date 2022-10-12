@@ -3,7 +3,7 @@ package paladin
 import (
 	"encoding"
 	"encoding/json"
-	"github.com/peterlearn/kratos/pkg/log"
+	"github.com/peterlearn/kratos/v1/pkg/log"
 	"reflect"
 	"time"
 

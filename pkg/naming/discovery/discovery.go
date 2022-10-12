@@ -6,7 +6,7 @@ import (
 	"errors"
 	"fmt"
 
-	wmeta "github.com/peterlearn/kratos/pkg/naming/metadata"
+	wmeta "github.com/peterlearn/kratos/v1/pkg/naming/metadata"
 
 	"math/rand"
 	"net/url"
@@ -16,18 +16,18 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/peterlearn/kratos/pkg/net/rpc/warden/balancer/wrr"
+	"github.com/peterlearn/kratos/v1/pkg/net/rpc/warden/balancer/wrr"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/resolver"
 	"google.golang.org/grpc/serviceconfig"
 
-	"github.com/peterlearn/kratos/pkg/conf/env"
-	"github.com/peterlearn/kratos/pkg/ecode"
-	"github.com/peterlearn/kratos/pkg/log"
-	"github.com/peterlearn/kratos/pkg/naming"
-	http "github.com/peterlearn/kratos/pkg/net/http/bmclient"
-	xtime "github.com/peterlearn/kratos/pkg/time"
+	"github.com/peterlearn/kratos/v1/pkg/conf/env"
+	"github.com/peterlearn/kratos/v1/pkg/ecode"
+	"github.com/peterlearn/kratos/v1/pkg/log"
+	"github.com/peterlearn/kratos/v1/pkg/naming"
+	http "github.com/peterlearn/kratos/v1/pkg/net/http/bmclient"
+	xtime "github.com/peterlearn/kratos/v1/pkg/time"
 )
 
 const (

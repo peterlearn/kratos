@@ -1,7 +1,7 @@
 package gin
 
 import (
-	"github.com/peterlearn/kratos/pkg/ecode"
+	"github.com/peterlearn/kratos/v1/pkg/ecode"
 )
 
 type JSON struct {

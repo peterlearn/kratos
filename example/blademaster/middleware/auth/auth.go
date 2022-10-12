@@ -1,9 +1,9 @@
 package auth
 
 import (
-	"github.com/peterlearn/kratos/pkg/ecode"
-	bm "github.com/peterlearn/kratos/pkg/net/http/blademaster"
-	"github.com/peterlearn/kratos/pkg/net/metadata"
+	"github.com/peterlearn/kratos/v1/pkg/ecode"
+	bm "github.com/peterlearn/kratos/v1/pkg/net/http/blademaster"
+	"github.com/peterlearn/kratos/v1/pkg/net/metadata"
 )
 
 // Config is the identify config model.

@@ -17,7 +17,7 @@ import (
 )
 
 const (
-	toolDoc = "https://github.com/peterlearn/kratos/blob/master/doc/wiki-cn/kratos-tool.md"
+	toolDoc = "https://github.com/peterlearn/kratos/v1/blob/master/doc/wiki-cn/kratos-tool.md"
 )
 
 // Tool is kratos tool.

@@ -4,7 +4,7 @@ package tidb
 //import (
 //	"time"
 //
-//	"github.com/peterlearn/kratos/pkg/log"
+//	"github.com/peterlearn/kratos/v1/pkg/log"
 //)
 //
 //func (db *DB) nodeproc(e <-chan struct{}) {

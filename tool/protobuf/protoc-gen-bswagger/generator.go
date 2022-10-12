@@ -9,11 +9,11 @@ import (
 
 	"github.com/golang/protobuf/protoc-gen-go/descriptor"
 	plugin "github.com/golang/protobuf/protoc-gen-go/plugin"
-	"github.com/peterlearn/kratos/tool/protobuf/pkg/gen"
-	"github.com/peterlearn/kratos/tool/protobuf/pkg/generator"
-	"github.com/peterlearn/kratos/tool/protobuf/pkg/naming"
-	"github.com/peterlearn/kratos/tool/protobuf/pkg/tag"
-	"github.com/peterlearn/kratos/tool/protobuf/pkg/typemap"
+	"github.com/peterlearn/kratos/v1/tool/protobuf/pkg/gen"
+	"github.com/peterlearn/kratos/v1/tool/protobuf/pkg/generator"
+	"github.com/peterlearn/kratos/v1/tool/protobuf/pkg/naming"
+	"github.com/peterlearn/kratos/v1/tool/protobuf/pkg/tag"
+	"github.com/peterlearn/kratos/v1/tool/protobuf/pkg/typemap"
 )
 
 type swaggerGen struct {

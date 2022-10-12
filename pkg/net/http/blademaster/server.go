@@ -13,12 +13,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/peterlearn/kratos/pkg/log"
-	"github.com/peterlearn/kratos/pkg/net/criticality"
-	"github.com/peterlearn/kratos/pkg/net/http/config"
-	"github.com/peterlearn/kratos/pkg/net/ip"
-	"github.com/peterlearn/kratos/pkg/net/metadata"
-	xtime "github.com/peterlearn/kratos/pkg/time"
+	"github.com/peterlearn/kratos/v1/pkg/log"
+	"github.com/peterlearn/kratos/v1/pkg/net/criticality"
+	"github.com/peterlearn/kratos/v1/pkg/net/http/config"
+	"github.com/peterlearn/kratos/v1/pkg/net/ip"
+	"github.com/peterlearn/kratos/v1/pkg/net/metadata"
+	xtime "github.com/peterlearn/kratos/v1/pkg/time"
 
 	"github.com/pkg/errors"
 )

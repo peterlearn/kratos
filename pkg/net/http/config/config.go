@@ -2,8 +2,8 @@ package config
 
 import (
 	"github.com/pkg/errors"
-	"github.com/peterlearn/kratos/pkg/conf/dsn"
-	xtime "github.com/peterlearn/kratos/pkg/time"
+	"github.com/peterlearn/kratos/v1/pkg/conf/dsn"
+	xtime "github.com/peterlearn/kratos/v1/pkg/time"
 )
 
 // ServerConfig is the bm server config model

@@ -1,6 +1,6 @@
 package warden
 
-import "github.com/peterlearn/kratos/pkg/stat/metric"
+import "github.com/peterlearn/kratos/v1/pkg/stat/metric"
 
 const (
 	clientNamespace = "grpc_client"

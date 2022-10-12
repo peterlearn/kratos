@@ -5,7 +5,7 @@ import (
 )
 
 const (
-	_getWSGen = "go get -u github.com/peterlearn/kratos/tool/protobuf/protoc-gen-ws"
+	_getWSGen = "go get -u github.com/peterlearn/kratos/v1/tool/protobuf/protoc-gen-ws"
 	_WSProtoc = "protoc --proto_path=%s --proto_path=%s --proto_path=%s --proto_path=%s --ws_out=:."
 )
 

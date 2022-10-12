@@ -3,7 +3,7 @@ package paladin_test
 import (
 	"testing"
 
-	"github.com/peterlearn/kratos/pkg/conf/paladin"
+	"github.com/peterlearn/kratos/v1/pkg/conf/paladin"
 
 	"github.com/BurntSushi/toml"
 	"github.com/stretchr/testify/assert"

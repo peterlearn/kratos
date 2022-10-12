@@ -23,8 +23,8 @@ import (
 	"context"
 	"sync"
 
-	"github.com/peterlearn/kratos/pkg/cache"
-	"github.com/peterlearn/kratos/pkg/sync/errgroup"
+	"github.com/peterlearn/kratos/v1/pkg/cache"
+	"github.com/peterlearn/kratos/v1/pkg/sync/errgroup"
 )
 
 var _ _bts

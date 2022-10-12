@@ -13,7 +13,7 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	"github.com/peterlearn/kratos/pkg/ecode"
+	"github.com/peterlearn/kratos/v1/pkg/ecode"
 )
 
 func TestCodeConvert(t *testing.T) {

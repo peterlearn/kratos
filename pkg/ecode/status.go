@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/peterlearn/kratos/pkg/ecode/types"
+	"github.com/peterlearn/kratos/v1/pkg/ecode/types"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes"

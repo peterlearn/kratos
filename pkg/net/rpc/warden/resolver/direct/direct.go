@@ -2,13 +2,13 @@ package direct
 
 import (
 	"context"
-	wmeta "github.com/peterlearn/kratos/pkg/naming/metadata"
-	"github.com/peterlearn/kratos/pkg/net/rpc/warden/balancer/wrr"
+	wmeta "github.com/peterlearn/kratos/v1/pkg/naming/metadata"
+	"github.com/peterlearn/kratos/v1/pkg/net/rpc/warden/balancer/wrr"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/serviceconfig"
 	"strings"
 
-	"github.com/peterlearn/kratos/pkg/naming"
+	"github.com/peterlearn/kratos/v1/pkg/naming"
 	gresolver "google.golang.org/grpc/resolver"
 )
 

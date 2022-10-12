@@ -17,10 +17,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/peterlearn/kratos/pkg/conf/env"
-	"github.com/peterlearn/kratos/pkg/net/metadata"
-	"github.com/peterlearn/kratos/pkg/net/netutil/breaker"
-	xtime "github.com/peterlearn/kratos/pkg/time"
+	"github.com/peterlearn/kratos/v1/pkg/conf/env"
+	"github.com/peterlearn/kratos/v1/pkg/net/metadata"
+	"github.com/peterlearn/kratos/v1/pkg/net/netutil/breaker"
+	xtime "github.com/peterlearn/kratos/v1/pkg/time"
 
 	"github.com/gogo/protobuf/proto"
 	pkgerr "github.com/pkg/errors"

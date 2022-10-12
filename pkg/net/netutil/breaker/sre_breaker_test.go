@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/peterlearn/kratos/pkg/stat/metric"
-	xtime "github.com/peterlearn/kratos/pkg/time"
+	"github.com/peterlearn/kratos/v1/pkg/stat/metric"
+	xtime "github.com/peterlearn/kratos/v1/pkg/time"
 
 	"github.com/stretchr/testify/assert"
 )

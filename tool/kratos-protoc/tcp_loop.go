@@ -5,7 +5,7 @@ import (
 )
 
 const (
-	_getTcpLoopGen = "go get -u github.com/peterlearn/kratos/tool/protobuf/protoc-gen-tcp-loop"
+	_getTcpLoopGen = "go get -u github.com/peterlearn/kratos/v1/tool/protobuf/protoc-gen-tcp-loop"
 	_tcpLoopProtoc = "protoc --proto_path=%s --proto_path=%s --proto_path=%s --proto_path=%s --tcp-loop_out=:."
 )
 

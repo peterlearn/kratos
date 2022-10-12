@@ -6,9 +6,9 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	"github.com/peterlearn/kratos/pkg/conf/env"
-	wmeta "github.com/peterlearn/kratos/pkg/naming/metadata"
-	"github.com/peterlearn/kratos/pkg/net/rpc/warden/balancer/wrr"
+	"github.com/peterlearn/kratos/v1/pkg/conf/env"
+	wmeta "github.com/peterlearn/kratos/v1/pkg/naming/metadata"
+	"github.com/peterlearn/kratos/v1/pkg/net/rpc/warden/balancer/wrr"
 	"google.golang.org/grpc/resolver"
 	"google.golang.org/grpc/serviceconfig"
 	"net/url"
@@ -20,8 +20,8 @@ import (
 	"time"
 
 	mvccpb1 "github.com/coreos/etcd/mvcc/mvccpb"
-	"github.com/peterlearn/kratos/pkg/log"
-	"github.com/peterlearn/kratos/pkg/naming"
+	"github.com/peterlearn/kratos/v1/pkg/log"
+	"github.com/peterlearn/kratos/v1/pkg/naming"
 	"go.etcd.io/etcd/clientv3"
 	"google.golang.org/grpc"
 )

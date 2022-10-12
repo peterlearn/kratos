@@ -7,8 +7,8 @@ import (
 	"context"
 
 	google_protobuf1 "github.com/golang/protobuf/ptypes/empty"
-	bm "github.com/peterlearn/kratos/pkg/net/http/blademaster"
-	"github.com/peterlearn/kratos/pkg/net/http/blademaster/binding"
+	bm "github.com/peterlearn/kratos/v1/pkg/net/http/blademaster"
+	"github.com/peterlearn/kratos/v1/pkg/net/http/blademaster/binding"
 )
 
 // to suppressed 'imported but not used warning'

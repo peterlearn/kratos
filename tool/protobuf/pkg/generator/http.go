@@ -7,8 +7,8 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/protoc-gen-go/descriptor"
-	"github.com/peterlearn/kratos/tool/protobuf/pkg/tag"
-	"github.com/peterlearn/kratos/tool/protobuf/pkg/typemap"
+	"github.com/peterlearn/kratos/v1/tool/protobuf/pkg/tag"
+	"github.com/peterlearn/kratos/v1/tool/protobuf/pkg/typemap"
 	"google.golang.org/genproto/googleapis/api/annotations"
 )
 

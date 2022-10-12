@@ -19,9 +19,9 @@ import (
 	{{if .UseStrConv}}"strconv"{{end}}
 	{{if .EnableBatch }}"sync"{{end}}
 NEWLINE
-	{{if .UseMemcached }}"github.com/peterlearn/kratos/pkg/cache/memcache"{{end}}
-	{{if .EnableBatch }}"github.com/peterlearn/kratos/pkg/sync/errgroup"{{end}}
-	"github.com/peterlearn/kratos/pkg/log"
+	{{if .UseMemcached }}"github.com/peterlearn/kratos/v1/pkg/cache/memcache"{{end}}
+	{{if .EnableBatch }}"github.com/peterlearn/kratos/v1/pkg/sync/errgroup"{{end}}
+	"github.com/peterlearn/kratos/v1/pkg/log"
 	{{.ImportPackage}}
 )
 

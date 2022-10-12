@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/peterlearn/kratos/pkg/net/metadata"
+	"github.com/peterlearn/kratos/v1/pkg/net/metadata"
 
 	"github.com/stretchr/testify/assert"
 )

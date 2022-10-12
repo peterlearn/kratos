@@ -5,7 +5,7 @@ import (
 )
 
 const (
-	_getGinGen = "go get -u github.com/peterlearn/kratos/tool/protobuf/protoc-gen-gin"
+	_getGinGen = "go get -u github.com/peterlearn/kratos/v1/tool/protobuf/protoc-gen-gin"
 	_GinProtoc = "protoc --proto_path=%s --proto_path=%s --proto_path=%s --proto_path=%s --gin_out=:."
 )
 
